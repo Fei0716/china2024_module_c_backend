@@ -35,7 +35,6 @@ class AdminController extends Controller
             'message' => 'Invalid name or password',
         ], 400);
     }
-
     public function logout(Request $request){
         $token = $request->bearerToken();
         $admin = Admin::where('token', $token)->first();
